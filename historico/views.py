@@ -15,4 +15,4 @@ def index(request):
     else:
         logging.info("Nao fez POST")
         historico = Historico.objects.all()
-        return render(request, 'historico/index.html', {'historico': historico, 'erro': erro})
+        return render(request, 'historico/index.html', {'historico': historico})
