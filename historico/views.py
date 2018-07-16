@@ -8,5 +8,5 @@ def index(request):
         Historico.objects.create(temp=request.POST['temp'], feel=request.POST['feels'], dew=request.POST['dew'],
                                  humidity=request.POST['humidity'])
         return HttpResponse(request)
-    else
+    else:
         return render(request, 'historico/index.html', {'historico': historico})
