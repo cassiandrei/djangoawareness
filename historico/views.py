@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Historico
 from django.http import HttpResponse
 
+
 # Create your views here.
 def index(request):
     if request.method == 'POST':
@@ -9,4 +10,5 @@ def index(request):
                                  humidity=request.POST['humidity'])
         return HttpResponse(request)
     else:
+        historico = Historico.objects.all()
         return render(request, 'historico/index.html', {'historico': historico})
