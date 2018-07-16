@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from historico import views
+from historico.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
